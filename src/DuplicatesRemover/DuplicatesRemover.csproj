@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>ETLPuebla</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.3.0" />
+      <PackageReference Include="Microsoft.Data.Analysis" Version="0.22.1" />
+      <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.1" />
+      <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="appsettings.json" />
+      <Content Include="appsettings.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Assets\ventas_con_duplicados.csv" />
+      <Content Include="Assets\ventas_con_duplicados.csv">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+</Project>
